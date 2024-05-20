@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,10 +6,24 @@ import { Router } from '@angular/router';
   templateUrl: './cadastro-veiculo.component.html',
   styleUrl: './cadastro-veiculo.component.css'
 })
-export class CadastroVeiculoComponent {
+export class CadastroVeiculoComponent implements OnInit {
+
+  cliente = {
+    nome:'',
+    cpf: ''
+  };
+
 
   constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    // Carregar os dados do cliente salvos anteriormente
+    const clienteSalvo = history.state.cliente;
+    if (clienteSalvo) {
+      this.cliente.cpf = clienteSalvo.cpf;
+      this.cliente.nome = clienteSalvo.nome;
+    }
+  }
 
   entrarPrincipal(): void {
 

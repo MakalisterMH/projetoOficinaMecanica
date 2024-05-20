@@ -13,6 +13,10 @@ import { CadastroRevisaoComponent } from './cadastro-revisao/cadastro-revisao.co
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ClienteService } from './cliente.service';
+import { FuncionarioService } from './funcionario.service';
+import { ExibirClientesComponent } from './exibir-clientes/exibir-clientes.component';
+import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { RouterModule } from '@angular/router';
     CadastroFuncionarioComponent,
     CadastroEnderecoComponent,
     CadastroVeiculoComponent,
-    CadastroRevisaoComponent
+    CadastroRevisaoComponent,
+    ExibirClientesComponent,
+    EditarClienteComponent
   ],
   imports: [
     HttpClientModule,
@@ -32,7 +38,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule
   ],
-  providers: [],
+  providers: [ClienteService,FuncionarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,12 +9,12 @@
 
         </div>
 
-        <input type="text" placeholder="NOME">
-        <input type="text" placeholder="EMAIL">
-        <input type="text" placeholder="CPF">
-        <input type="text" placeholder="EMAIL">
+        <input [(ngModel)]="cliente.nome" type="text" placeholder="NOME">
+        <input [(ngModel)]="cliente.cpf" type="text" placeholder="CPF">
+        <input [(ngModel)]="cliente.telefone" type="text" placeholder="TELEFONE">
+        <input [(ngModel)]="cliente.email" type="text" placeholder="EMAIL">
 
-        <button>AVANÇAR</button>
+        <button (click)="entrarCadEndereco()" >AVANÇAR</button>
 
     </div>
 

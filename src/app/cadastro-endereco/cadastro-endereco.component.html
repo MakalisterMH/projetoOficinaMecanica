@@ -9,16 +9,16 @@
 
         </div>
 
-        <input type="text" placeholder="CEP">
+        <input [(ngModel)]="endereco.cep" (click)="buscarCep()" type="text" placeholder="CEP">
 
-        <button style="background-color: #9B0025;">BUSCAR</button>
+        <button (click)="buscarCep()" style="background-color: #9B0025;">BUSCAR</button>
 
-        <input type="text" placeholder="LOGRADOURO">
-        <input type="text" placeholder="BAIRRO">
-        <input type="text" placeholder="LOCALIDADE">
-        <input type="text" placeholder="UF">
+        <input [(ngModel)]="endereco.logradouro" type="text" placeholder="LOGRADOURO">
+        <input [(ngModel)]="endereco.bairro" type="text" placeholder="BAIRRO">
+        <input [(ngModel)]="endereco.localidade" type="text" placeholder="LOCALIDADE">
+        <input [(ngModel)]="endereco.uf" type="text" placeholder="UF">
 
-        <button>AVANÇAR</button>
+        <button (click)="cadastrarEndereco()" >AVANÇAR</button>
 
     </div>
 

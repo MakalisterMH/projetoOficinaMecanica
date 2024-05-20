@@ -12,41 +12,46 @@ export class TelaPrincipalComponent {
 
 
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
 
   entrarPrincipal(): void {
 
     this.router.navigate(['/tela-principal']);
-  }  
+  }
 
 
   entrarCadFuncionario(): void {
 
     this.router.navigate(['/cadastro-funcionario']);
-  } 
+  }
 
 
   entrarCadCliente(): void {
 
     this.router.navigate(['/cadastro-cliente']);
-  } 
+  }
 
   entrarCadEndereco(): void {
 
     this.router.navigate(['/cadastro-endereco']);
-  } 
+  }
 
 
-entrarCadRevisao(): void {
+  entrarCadRevisao(): void {
 
     this.router.navigate(['/cadastro-revisao']);
-  } 
+  }
 
-entrarCadVeiculo(): void {
+  entrarCadVeiculo(): void {
 
     this.router.navigate(['/cadastro-veiculo']);
-  }   
+  }
+
+  entrarExibirClientes(): void {
+
+    this.router.navigate(['/exibir-clientes']);
+  }
 
 
 
